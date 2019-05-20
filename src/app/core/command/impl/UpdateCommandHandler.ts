@@ -1,16 +1,11 @@
-import { ICommandHandler } from '../ICommandHandler';
 import { BaseUpdateModel } from '../request/BaseUpdateModel';
 import { BaseResponseCommand } from '../response/BaseReponseCommand';
 import { IUpdateCommandHandler } from '../IUpdateCommandHandler';
 
-export class UpdateCommandHandler implements IUpdateCommandHandler{
-    validate(request: BaseUpdateModel): boolean {
+export class UpdateCommandHandler<O extends Object,U extends BaseUpdateModel,R extends BaseResponseCommand<O>> implements IUpdateCommandHandler<O,U,R>{
+    execute(request: U): R {
         throw new Error("Method not implemented.");
     }
-    execute(request: BaseUpdateModel): BaseResponseCommand {
-        request
-        throw new Error("Method not implemented.");
-    }
-
+  
 
 }
