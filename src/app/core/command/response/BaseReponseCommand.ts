@@ -1,5 +1,6 @@
 import { BaseRepone } from '../../model/BaseReponse';
 
-export class BaseResponseCommand extends BaseRepone{
-
+export interface BaseResponseCommand<O> extends BaseRepone {
+    object:O;
+   
 }
